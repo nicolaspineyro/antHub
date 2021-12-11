@@ -12,10 +12,10 @@ Small apps that calculates the likehood for an ant to win!
 ### Instructions for running the project:
     1 - Clone this repository.
     
-    2 - Go to your the project's root folder and run yarn install.
+    2 - Go to the project's root folder and run yarn install.
     
     3 - Go to ios folder and run pod install
     
-    4 - Run react-native run-ios to run the prooject!
+    4 - Go back to the root folder and run react-native run-ios to run the prooject!
 
 
