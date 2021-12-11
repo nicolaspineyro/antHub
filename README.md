@@ -1,7 +1,7 @@
 # antHub
 ## React-Native Code Challenge
 
-Small apps that calculates the likehood for and ant to win!
+Small apps that calculates the likehood for an ant to win!
 
 
 ![simulator_screenshot_C5EA0588-A244-4FE0-BF48-5C6939ABF071](https://user-images.githubusercontent.com/69359089/145635185-6dc49f1a-e924-4c02-93f1-423e9e2e8bc6.png)
