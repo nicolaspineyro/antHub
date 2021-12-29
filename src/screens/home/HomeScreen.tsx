@@ -37,7 +37,6 @@ const HomeScreen = () => {
         .then(() => alert('Signed out!'));
       navigation.navigate(routeNames.Login);
     } catch (error) {
-      console.log(error)
       alert('Signed out error, try again later.');
     }
   };
@@ -56,8 +55,7 @@ const HomeScreen = () => {
   return (
     <LinearGradient {...LinearGradientProps}>
       <SafeAreaView>
-        <Button title="Log Out" onPress={signOut} color={Colors.red} />
-        <AntsHub data={content} />
+        <AntsHub data={content} signOut={signOut} />
       </SafeAreaView>
     </LinearGradient>
   );

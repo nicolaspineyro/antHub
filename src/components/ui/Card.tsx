@@ -54,7 +54,7 @@ const Card = ({item, setAntsStats, allPress}: CardProps) => {
   };
 
   const renderCalcStatus = () =>
-    !calcStatus.result
+    !calcStatus.result 
       ? ANT_STATUS_PARSED[calcStatus.status]
       : `${ANT_STATUS_PARSED[calcStatus.status]}: ${calcStatus.result}%`;
 

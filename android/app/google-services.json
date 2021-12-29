@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "409353537148",
+    "project_id": "anthub-7170c",
+    "storage_bucket": "anthub-7170c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409353537148:android:e5126245d6c9fd733aabf9",
+        "android_client_info": {
+          "package_name": "com.anthub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "409353537148-0i53nssrcaidcu0ph1v80khrglrl41on.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.anthub",
+            "certificate_hash": "22b3fce98d55b60132e992c3626b04b095555020"
+          }
+        },
+        {
+          "client_id": "409353537148-rlk0t1748pjsefqc7ic7k1uhrhr2f8iv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAA0mEYt8LaCFCucN0joYpZQAduruBzNnE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "409353537148-rlk0t1748pjsefqc7ic7k1uhrhr2f8iv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "409353537148-dql691tk1mllg2rn2gc8pmkplf4e31gd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "antHub"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

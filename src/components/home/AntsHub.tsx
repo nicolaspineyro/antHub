@@ -6,9 +6,10 @@ import {ANT_STATUS, ANT_STATUS_PARSED} from '/utils/constants';
 
 interface HubProps {
   data: Array<any>;
+  signOut: () => void;
 }
 
-const AntsHub = ({data}: HubProps) => {
+const AntsHub = ({data, signOut}: HubProps) => {
   const [antsStats, setAntsStats] = useState(
     data.map(item => ({
       id: item.id,
@@ -64,19 +65,22 @@ const AntsHub = ({data}: HubProps) => {
       </View>
     );
   };
-  
+
   const sortedData = data.sort((a, b) => {
     return antsStats[b.id]?.result - antsStats[a.id]?.result;
   });
 
   return (
-    <View>
+    <View style={Styles.Container}>
+      <View style={Styles.buttonsContainer}>
+        <Button title="Log Out" onPress={signOut} color={Colors.red} />
+        <Button
+          title={'Calculate All'}
+          onPress={handlePress}
+          color={Colors.green}
+        />
+      </View>
       {renderAntStats()}
-      <Button
-        title={'Calculate All'}
-        onPress={handlePress}
-        color={Colors.green}
-      />
       <FlatList
         data={sortedData}
         renderItem={renderItem}

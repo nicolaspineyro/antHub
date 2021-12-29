@@ -7,16 +7,15 @@ const Button = ({title, onPress, color}: ButtonProps) => {
     ButtonContainer: {
       alignItems: 'center',
       backgroundColor: !!color ? color : Colors.gray,
-      width: '50%',
+      width: '40%',
       alignSelf: 'center',
       borderRadius: 10,
-      margin: '5%',
     },
     ButtonText: {
       color: 'white',
-      margin: '5%',
       fontWeight: 'bold',
-      fontSize: 20,
+      fontSize: 18,
+      padding: 10,
     },
   });
   return (

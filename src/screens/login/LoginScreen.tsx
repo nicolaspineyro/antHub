@@ -12,6 +12,7 @@ import {
   GoogleSignin,
   GoogleSigninButton,
 } from '@react-native-google-signin/google-signin';
+import {WEB_CLIENT_ID} from '@env';
 
 const LoginScreen = () => {
   const navigation = useNavigation();
@@ -19,7 +20,9 @@ const LoginScreen = () => {
   const [userInfo, setUserInfo] = useState([]);
 
   useEffect(() => {
-    GoogleSignin.configure();
+    GoogleSignin.configure({
+      webClientId: WEB_CLIENT_ID,
+    });
     const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
     return subscriber;
   }, []);
@@ -40,11 +43,12 @@ const LoginScreen = () => {
   const signIn = async () => {
     try {
       await GoogleSignin.hasPlayServices();
-      const {idToken} = await GoogleSignin.signIn();
-      const credential = auth.GoogleAuthProvider.credential(idToken);
+      const response = await GoogleSignin.signIn();
+      const credential = auth.GoogleAuthProvider.credential(response.idToken);
       setLoggedIn(true);
       await auth().signInWithCredential(credential);
     } catch (error) {
+      console.log(error);
       alert('Sign in has fail');
     }
   };
